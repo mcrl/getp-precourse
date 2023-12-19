@@ -76,7 +76,7 @@ int main(int argc, char* argv[]){
   void* memory_pool = malloc(54 * MAX_BOOKS * 2);
 
   lib.books = (book*)memory_pool;
-  backup.books = (book*)(memory_pool + 54 * MAX_BOOKS);
+  backup.books = (books*)((char*)(memory_pool + 54 * MAX_BOOKS));
 
   insert_books(&lib);
   print_contents(&lib);
@@ -87,8 +87,11 @@ int main(int argc, char* argv[]){
   // load the data to backup instance
   deserialize("data.bin", &backup, MAX_BOOKS);
 
-  // The value might be changed ?
+  // Check the loaded value
   print_contents(&lib);
+
+  // The original value might be changed ?
+  print_contents(&backup);
 
   return 0;
 }
