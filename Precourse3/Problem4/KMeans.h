@@ -1,7 +1,7 @@
 // KMeans.h
 #ifndef KMEANS_H
 #define KMEANS_H
-
+#include "Point.h"
 #include <vector>
 
 class KMeans {
