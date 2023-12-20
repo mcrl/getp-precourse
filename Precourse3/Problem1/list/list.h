@@ -28,7 +28,7 @@ public:
   public:
     iterator(Node *node);
 
-    T &operator*() const;
+    const T &operator*() const;
     iterator &operator++();
     iterator operator++(int);
     bool operator!=(const iterator &other) const;

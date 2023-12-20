@@ -18,7 +18,7 @@ template <class T> list<T>::iterator::iterator(Node *node) {
   // TODO : FILL IN HERE
 }
 
-template <class T> T &list<T>::iterator::operator*() const {
+template <class T> const T &list<T>::iterator::operator*() const {
   // TODO : FILL IN HERE
 }
 
